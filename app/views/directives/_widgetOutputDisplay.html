@@ -1,0 +1,107 @@
+<div class="widget-output-display">
+
+<div class="messages" ng-class="{'with-pem' : source.widgetStatus.hasPemFile}">
+
+
+    <div class="message-items">
+
+        <div class="message-item pem-cell">
+
+            <div ng-show="source.widgetStatus.hasPemFile" class="pem-file">
+                <div class="message" title="A generated new private key for this instance">Private key file</div>
+                <div class="actions">
+                    <!--<button class="btn btn-info" ng-click="page.showPemFileContent = true"><i class="fa fa-align-justify"></i>View</button>-->
+                    <a class="btn btn-info" href="{{source.widgetStatus.pemDownloadLink}}" download="private_key.pem"><i class="fa fa-download"></i>Download</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="message-item">
+            <div>
+                <div>
+                    <div class="progress" ng-show="!source.widgetStatus.completed">
+                        <div class="progress-bar progress-bar-striped  progress-bar-success active"  role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+
+                        </div>
+                    </div>
+
+                    <div style="font-size:18px; text-align:center;" ng-show="!source.widgetStatus.completed">
+                        {{'workingHard'|i18n}}
+                    </div>
+                </div>
+            </div>
+            <div class="finished-successfully" ng-show="source.widgetStatus.completed">
+                <div class="message">
+                        {{ 'installComplete' | i18n}}
+                </div>
+                <div>
+                    <!--
+                    <a class="btn btn-success" href="{{source.widgetStatus.consoleLink.url}}" target="_blank"><i class="fa fa-angle-double-right"></i>{{source.widgetStatus.consoleLink.title}}</a>
+                    <a class="btn btn-success" href="http://{{source.widgetStatus.publicIp}}:8099" target="_blank"><i class="fa fa-cloud" style="padding-right:20px;"></i>Monitor with Cloudify</a>
+                    -->
+                </div>
+            </div>
+        </div>
+        <div class="message-item">
+
+            <div class="something-is-wrong">
+                <button class="btn btn-primary" ng-show="!page.showSomethingIsWrong" ng-click="page.showSomethingIsWrong=true">
+                    <i class="fa fa-bug"></i>Stop and try again
+                </button>
+                <div dialog show="page.showSomethingIsWrong">
+                    <div style="padding: 5px;background-color: rgb(229, 228, 228);margin-bottom: 5px;">Confirmation</div>
+                    <!--
+                    <div class="we-are-sorry">We are very sorry to hear that something is wrong.<br/><span style="font-size:17px"> Here is what you can do about it..</span></div>
+                    <button class="btn btn-link" ng-click="page.showSomethingIsWrong=false">Close</button>
+                    -->
+                    <div class="we-are-sorry">Are you sure that you want to stop the provisioning ?</div>
+
+                    <div class="stop-wrapper" style="margin-bottom: 10px;">
+                        <button class="btn btn-primary stop-widget" ng-click="callStop()" >
+                            <i class="fa fa-stop"></i>Yes
+                        </button>
+                        <button class="btn btn-link" ng-click="page.showSomethingIsWrong=false">No</button>
+                    </div>
+                    <!--<div class="warning">Machines should be terminated manually</div>-->
+                    <!--<div class="my-mistake">-->
+                        <!--<button class="btn btn-link" ng-click="page.showSomethingIsWrong=false">My mistake, everything is fine</button>-->
+                    <!--</div>-->
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div dialog show="page.stopping" class="stopping-widget">
+        <i class="fa fa-refresh fa-spin"></i>
+        <div>stopping...</div>
+    </div>
+
+</div>
+
+    <div dialog show="page.showPemFileContent" class="pem-content">
+        <div class="popup-content">
+            <div class="instructions">Copy and paste the content of the private key <button class="btn btn-link" ng-click="page.showPemFileContent=false">Close</button> </div>
+            <pre><code>{{source.widgetStatus.pemFileContent}}</code></pre>
+        </div>
+    </div>
+    <!--<div class="ng-modal" ng-show="!!showPemFileContent ">
+        <div class="ng-modal-overlay"></div>
+        <div class="pem-content ng-modal-dialog" >
+            <div class="popup-content">
+                <div class="instructions">Copy and paste the content of the private key <button class="btn btn-link" ng-click="showPemFileContent=false">Close</button> </div>
+                <pre><code>{{source.widgetStatus.pemFileContent}}</code></pre>
+            </div>
+        </div>
+    </div>-->
+
+<pre class="pre" style="max-height:400px;">
+    <div>{{'startedMightTakeWhile' | i18n }}&#10;</div>
+
+    <!-- we show a digested version of the output -->
+    <div ng-repeat="line in digestedOutput track by $index">{{line}}</div>
+    <!--<div ng-repeat="line in source.widgetStatus.rawOutput track by $index">{{line}}</div>-->
+    <div ng-show="!source.widgetStatus.completed">{{source.widgetStatus.ellipsis}}</div>
+    <div ng-show="source.widgetStatus.completed">Installation Completed. Look for more details at the top.</div>
+</pre>
+</div>

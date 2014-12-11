@@ -1,0 +1,213 @@
+{
+    "proof" : "the is the english translation",
+    "biginsightsEditions" : {
+        "enterpriseProduction" : "Enterprise Production Environment",
+        "enterprise":"Enterprise Non-Production Environment",
+        "standardProduction" : "Standard Production Environment",
+        "standard" : "Standard Non-Production Environment",
+        "quickstart":"Quick Start"
+    },
+
+    "workingHard" : "BLU Acceleration for Cloud Solo is being prepared ...",
+    "installComplete" : "BLU Acceleration for Cloud Solo is  prepared successfully, and please follow the instructions in the notification email to proceed. ",
+    "lookingForPrevious":"Looking for previous installations...",
+    "startedMightTakeWhile" : "BLU Installation started. Please wait, this might take a while...",
+    "bluSolo" : {
+        "awsApiKey" : "<a href=\"http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSGettingStartedGuide/AWSCredentials.html\" target=\"_blank\">How  to get your AWS API Key ? </a>",
+        "awsApiSecret" : "<a href=\"http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSGettingStartedGuide/AWSCredentials.html\" target=\"_blank\">How  to get your  AWS API Secret ? </a>",
+        "securityGroup" : "<a href=\"http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html\" target=\"_blank\">What is security group ?</a><br/> <a href='https://www.youtube.com/watch?v=925n0IykcMA' target='_blank'>See how to create a security group video</a></br> The following ports to be open in the given security group : 22, 25, 80, 389, 8787, 9443, 8443, 50000, 50001, 443, 9300, 8100, 8099.",
+        "softlayeruser" : "<a href=\"http://knowledgelayer.softlayer.com/procedure/add-new-user-customer-portal-account\" target=\"_blank\">How to get SoftLayer API username ?</a>",
+        "softlayerkey" : "<a href=\"http://knowledgelayer.softlayer.com/procedure/add-new-user-customer-portal-account\" target=\"_blank\">How to get SoftLayer API key  ?</a>",
+        "mustAgree" : "You must agree to email communications to participate in this program.",
+        "chooseCloud" : "Choose the cloud where you want to deploy your BLU Acceleration for Cloud",
+        "title" : "BLU Acceleration for Cloud",
+        "intro" : {
+            "text" : "Designed to meet demands of the most sophisticated enterprises, BLU Acceleration for Cloud Solo brings advanced data warehousing and analytics to an individual user. With the Solo plan you provision a private, dedicated data analytics and warehouse for your personal use… on the cloud of your choice (AWS or SoftLayer). Regardless of which cloud provider you choose to host your BLU Acceleration for Cloud Solo you will enjoy the same benefits.",
+            "item1" : "Use all of the capabilities: We held nothing back",
+            "item2" : "Single user configuration to keep the cost down without sacrificing function",
+            "item3" : "10GB of compressed database storage should accommodate 50GB or even larger data sets",
+            "item4" : "No charge for software. Only pay for your cloud resources",
+            "item5" : "Seamlessly upgrade to one of the business plans when you need more users or larger data sets"
+        },
+        "launch" : {
+            "title" : "Launch BLU Acceleration for Cloud",
+            "text1" : "To provision your private instance of BLU Acceleration for Cloud you will require either a <a href=\"http://www.softlayer.com/\">SoftLayer</a> or an <a href=\"https://www.amazon.com/ap/signin?openid.assoc_handle=aws&amp;openid.return_to=https%3A%2F%2Fportal.aws.amazon.com%2Fgp%2Faws%2Fdeveloper%2Fregistration%2Findex.html&amp;openid.mode=checkid_setup&amp;openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&amp;openid.identity=\">AWS account</a>. IBM software provided as part of the Solo plan is free of charges, however your account will be charged by the cloud provider for any cloud services you consume.",
+            "text2" : "Kindly fill in your credentials of AWS or SoftLayer account in the following Cloudify Widget to have an instance of BLU Acceleration for Cloud Solo -Beta :"
+        }
+    },
+
+    "filesystemTypes" : {
+        "hdfs" : "HDFS",
+        "gpfs" : "GPFS"
+    },
+    "serverTypes" : {
+        "cci" : "Virtual Server",
+        "baremetal" : "Dedicated BareMetal"
+    },
+    "cpu" : {
+        "xeon5620" : "Intel Xeon 5620 8 Cores (2.40 GHz)",
+        "2" : "2 cores",
+        "4" : "4 cores",
+        "8" : "8 cores",
+        "12" : "12 cores",
+        "16" : "16 cores"
+
+    },
+    "ram" : {
+        "16" : "16 GB",
+        "24" : "24 GB",
+        "32" : "32 GB",
+        "36" : "36 GB",
+        "48" : "48 GB",
+        "64" : "64 GB",
+        "96" : "96 GB",
+        "128" : "128 GB",
+        "144" : "144 GB",
+        "192" : "192 GB"
+    },
+    "disks" : {
+        "05" : "500GB SATA II",
+        "1" : "1.00TB SATA II",
+        "2" : "2.00TB SATA II",
+        "3" : "3.00TB SATA III",
+        "4" : "4.00TB SATA III",
+
+
+        "100":"100 GB (SAN)",
+        "250":"250 GB (SAN)",
+        "300": "300 GB (SAN)",
+        "350": "350 GB (SAN)",
+        "400": "400 GB (SAN)",
+        "500": "500 GB (SAN)",
+        "750": "750 GB (SAN)",
+        "1000": "1.00 TB (SAN)",
+        "1500": "1.50 TB (SAN)",
+        "2000": "2.00 TB (SAN)"
+
+
+    },
+
+    "help" : {
+        "clusterName" :"You will use the cluster's name to identify which of your SoftLayer devices are part of this cluster.",
+        "locationId" : "You should select the location closest to your data source to achieve better data transfer rates",
+        "edition" : "You must purchase a BigInsights license before creating your cluster or use your own if you already have a valid license.",
+        "filesystemTypes" :"Currently we only support HDFS",
+        "serverType" : "Dedicated BareMetal are single tenant physical servers while Virtual Servers are virtual machines on a multi-tenant environment. The deployment time for Dedicated BareMetal is significant higher compared to Virtual Servers.",
+        "maxInternalDrivers" : "This option defines the chassis size for your server. A larger chassis allows you to have more space for RAM and disks.",
+        "masterRam" : "The master node on a BigInsights cluster uses a significant amout of RAM. For a small cluster you can use 32GB but we recommend at least 96 GB for anything bigger.",
+        "dataRam" : "The data nodes on a BigInsights cluster don't rely as much on RAM storage",
+        "network" : "Currently we only support 1 Gbps network speed.",
+        "numberOfServers" : "You should have at least 3 data node servers for optimal performance.",
+        "maxInternalDrives" : "This option defines the chassis size for your server. A larger chassis allows you to have more space for RAM and disks.",
+        "operatingSystemDisk" : "Enabling RAID 1 provides a secondary hard drive for operating system data redundancy, this will improve system availability.",
+        "numberOfDataDisks" : "Having more disks per server allows you to store more data into your BigInsights cluster.",
+        "masterRaid" :"Enabling RAID 1 provides a secondary hard drive for operating system data redundacy, this will improve system availability."
+    },
+
+
+    "aws" : {
+     "regions" : {
+         "us-east-1": "US East 1"
+     }
+    },
+
+
+    "softlayer" : {
+        "datacenters" : {
+            "tor01": "Toronto 1",
+            "hkg02": "Hong Kong 2",
+            "lon02": "London 2",
+            "wdc01": "Washington 1"
+        },
+        "core" : {
+            "8x2g" : "8 x 2.0 GB",
+            "12x2g" : "12 x 2.0 GB",
+            "16x2g" : "16 x 2.0 GB"
+        },
+        "ram" : {
+            "32gb" : "32 GB",
+            "48gb" : "48 GB",
+            "64gb" : "64 GB"
+        },
+        "disk" : {
+            "100gbsan" :"100 GB (SAN)"
+        }
+    },
+
+    "blu" : {
+        "title": "BLU Acceleration for Cloud",
+        "tryHeader": "Try BLU Acceleration for Cloud (Beta) directly in your web browser",
+        "try": "Try BLU Acceleration for Cloud using the Cloudify widget below. Evaluate a set of great data warehousing and analytics technologies directly from your browser at no cost. Just follow these simple steps:",
+        "step1": "<strong>Step 1</strong>: Click the <strong>Play</strong> button in the widget below. If you don’t see a widget, ensure that JavaScript is enabled and that you’re using a modern web browser.",
+        "step2": "<strong>Step 2</strong>: Instantaneously sign up for the trial through your <strong>Google ID</strong> or by providing <strong>your name and email</strong> in the pop up that appears.",
+        "step3": "<strong>Step 3</strong>: When your system is ready, the widget will show a <strong>Start BLU Acceleration</strong> link. Click this link to start your trial. You can safely ignore any certificate warnings. In the page that opens up, enter the <strong>Username</strong> and <strong>Password</strong> shown in the bottom right of the widget below.",
+        "note": "Note",
+        "noteDetails": "You are advised not to upload sensitive data during your free trial of BLU Acceleration for Cloud.",
+        "trialTitle": "BLU Acceleration For Cloud Trial",
+        "trialEnds": "When your trial period ends, continue using BLU Acceleration for Cloud using the Solo or Business plans. "
+    },
+
+    "labels" : {
+        "name" : {
+            "top" : "Name",
+            "first" : "First",
+            "last" : "Last"
+        },
+        "companyName" : "Company (Organization) Name",
+        "region" : "Region",
+        "dataCenter" : "Data Center",
+        "softlayerUsername" : "Softlayer Username",
+        "softlayerApiKey" : "Softlayer API Key",
+        "disk" : "Disk",
+        "ram" : "RAM",
+        "core" : "CPU",
+        "cloudProvider" : "Cloud Provider",
+        "email" : "E-mail"
+    },
+
+    "formErrors" : {
+        "pleaseReview" : "unable to submit. there are errors. please review and submit again",
+        "general" : {
+            "invalid" : "Value is missing"
+        }
+    },
+
+    "causes" : {
+        "imageUnauthorized" : {
+            "error": "You have yet to register on the image in marketplace",
+            "action": "Register image on marketplace"
+        },
+        "callSupport" : {
+            "action" : "Contact support at: imcloud@ca.ibm.com"
+        },
+        "notRegisteredToMarketplace" : {
+            "error" : "You are not registered to AWS Marketplace",
+            "action" : "Please register to AWS marketplace"
+        },
+        "invalidSecurityGroup" : {
+            "error" : "The security group you supplied does not answer requirements",
+            "action" : "Validate your security group answers requirements"
+        },
+        "failedPriceValidation" : {
+            "error" : "Softlayer failed to validate the request. It might mean Softlayer is unstable or the data we have is old",
+            "action" : "Try again in a couple of minutes to eliminate the option it is Softlayer."
+        },
+        "credentialsInvalid" : {
+            "error" : "Incorrect credentials",
+            "action" : "Make sure you entered correct credentials"
+        },
+        "foundExistingManager" : {
+            "error" : "Cached information",
+            "action" : "Refresh the page and try again"
+        },
+        "invalidCredentials" : {
+            "error" : "The credentials you provided are incorrect.",
+            "action" : "Make sure you provide the correct credentials with the correct permissions."
+        }
+    },
+    "errorsDetected" : {
+        "intro": "You have encountered an error. Possible reasons are:",
+        "possibleActions" : "Please take the following steps and try again:"
+    }
+
+}

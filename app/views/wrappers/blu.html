@@ -1,0 +1,53 @@
+<div id="blu-page">
+    <!-- Fixed NavBar Section -->
+    <div id="navbar" class="header">
+        <div class="content-width">
+            <a href="http://bluforcloud.com/home" title="{{ 'blu.title' | i18n }}">{{ 'blu.title' | i18n }}</a>
+        </div>
+    </div>
+    <div id="page" class="content-width">
+        <script type="text/javascript">//<![CDATA[
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+            document.write("Note: BLU Acceleration for Cloud is not supported on Mobile devices.");
+        }
+        //]]>
+        </script>
+        <h2>{{ 'blu.tryHeader' | i18n }}</h2>
+
+        <p>{{ 'blu.try' | i18n }}</p>
+
+        <div class="steps" style="margin-left: 15px;">
+            <p><span ng-bind-html="'blu.step1' | i18n"></span></p>
+
+            <p><span
+                    ng-bind-html="'blu.step2' | i18n"></span>
+            </p>
+
+            <p><span
+                    ng-bind-html="'blu.step3' | i18n"></span>
+            </p>
+        </div>
+        <p><span class="label label-warning">{{ 'blu.note' | i18n }}</span>
+            {{ 'blu.noteDetails' | i18n }}</p>
+
+        <p style="text-align: center;">
+            <iframe src="http://ibmhkstaging.gsdev.info/public-folder/angularApps/index.html#/widgets/87341831-c130-4282-9f57-7bb6d1cce29c/view?since=1408442900266" scrolling="no" width="600px" height="463px" frameborder="no"></iframe>
+            <!--<iframe src="http://ibmhkprod.gsdev.info/public/angularApps/index.html#/widgets/998b0f7e-58d0-4945-aa0a-2f4bde563bf2/view?since=1406876840963" scrolling="no" width="600px" height="463px" frameborder="no"></iframe>-->
+            <!--<script type="text/javascript" id="cloudify-widget" data-api-key="998b0f7e-58d0-4945-aa0a-2f4bde563bf2" data-show-advanced="false" data-title="BLU Anonymous" data-host="ibmhkprod.gsdev.info" data-video_url="http://v.youku.com/v_show/id_XNzQ0NjM1MDA4.html"  src="http://ibmhkprod.gsdev.info/js/get_widget.js"></script>-->
+
+        </p>
+        <p>{{ 'blu.trialEnds' | i18n }}</p>
+
+        <p style="text-align: center;"></p>
+
+        <p></p>
+    </div>
+    <footer id="footer" class="content-width">
+            <img src="http://bluforcloud.com/wp-content/uploads/2013/10/ibm-e1382472155506.png"><br/>
+            <div class="switch-language"></div>
+
+    </footer>
+</div>
+
+
+

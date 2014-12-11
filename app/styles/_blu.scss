@@ -1,0 +1,70 @@
+html, body {
+  padding: 0;
+  margin: 0;
+
+}
+
+#blu-page {
+  font-size:14px;
+  line-height:21px;
+  padding: 0;
+  background-color: white;
+
+  *, h2 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  }
+
+  .content-width {
+    width: 100%;
+    max-width: 1095px;
+    margin: 0 auto;
+  }
+
+  .header {
+    height:37px;
+    background-color: #5e8dc8;
+    padding-top: 1px;
+    a {
+      font-size: 1em;
+      color: white;
+      line-height: 27px;
+      padding-top:4px;
+      margin-top:0;
+      font-weight:bold;
+      &:hover {
+        text-decoration: none;
+        color: #EEE;
+      }
+
+    }
+  }
+
+  #page {
+    h2 {
+      font-weight: bold;
+      margin: 1em 0;
+    }
+
+    .steps{
+      p{
+        margin:1.6em 0;
+      }
+    }
+
+    .label{
+      text-shadow: 0 -1px 0 rgba(0,0,0,0.35);
+      background-color: #f89406;
+    }
+
+  }
+
+  #footer{
+    padding:50px 0;
+    text-align:center;
+    height:180px;
+    .switch-language{
+      padding:20px 0;
+    }
+  }
+}
