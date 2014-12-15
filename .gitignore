@@ -5,3 +5,6 @@ dist
 app/bower_components
 .idea/**
 *.iml
+atlassian*
+dev
+xunit.xml

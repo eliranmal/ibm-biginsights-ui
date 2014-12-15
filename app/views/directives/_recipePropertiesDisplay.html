@@ -1,0 +1,21 @@
+<div  ng-show="showProperties()">
+<div style="float:right; position:fixed; top:0; right:0; background-color:orange;">
+<button class="btn btn-link" ng-click="showMore =true" ng-show="!showMore">Show Properties</button>
+<span ng-show="!!showMore">
+<button class="btn btn-link" ng-click="showMore =false">Hide</button>
+<div class="recipe-properties" >
+    <h1>Recipe Properties</h1>
+    <table class="table" style="width:400px;">
+        <tr>
+            <td>Key</td>
+            <td>Value</td>
+        </tr>
+        <tr ng-repeat="prop in properties">
+            <td>{{prop.key}}</td>
+            <td>{{prop.value}}</td>
+        </tr>
+    </table>
+</div>
+</span>
+</div>
+</div>
